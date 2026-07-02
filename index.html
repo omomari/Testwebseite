@@ -230,6 +230,7 @@
   .program-header {
     text-align: center;
     margin-bottom: 2rem;
+    scroll-margin-top: 6rem;
   }
   .program-header h2 {
     font-family: 'Cormorant Garamond', serif;
@@ -335,6 +336,9 @@
   }
   .prog-for-list {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
   }
   .prog-for-list li {
     font-size: 0.8rem;
@@ -345,6 +349,7 @@
     gap: 0.5rem;
     font-weight: 300;
     line-height: 1.45;
+    min-height: 1.4em;
   }
   .prog-col.featured .prog-for-list li {
     color: rgba(255,255,255,0.6);
@@ -355,9 +360,6 @@
     font-size: 0.75rem;
     flex-shrink: 0;
     margin-top: 0.1rem;
-  }
-  .prog-for-list li.empty {
-    visibility: hidden;
   }
 
   .prog-col-opts {
@@ -550,6 +552,7 @@
     border-left: 4px solid var(--champagne);
     margin-bottom: 3rem;
     align-items: start;
+    scroll-margin-top: 6rem;
   }
   .custom-info-aside {
     width: 90px;
@@ -588,6 +591,7 @@
     text-align: center;
     padding: 2rem 0;
     border-top: 1px solid var(--border-light);
+    scroll-margin-top: 6rem;
   }
   .signoff-mark {
     font-family: 'Cormorant Garamond', serif;
@@ -643,7 +647,7 @@
   <!-- NAVIGATION -->
   <nav>
     <div class="nav-wrap">
-      <a href="#" class="nav-logo">Lernbegleitung</a>
+      <a href="#" class="nav-logo" aria-label="Lernbegleitung Startseite">Lernbegleitung</a>
       <ul class="nav-menu">
         <li><a href="#uebersicht">Übersicht</a></li>
         <li><a href="#leistungen">Leistungen</a></li>
@@ -653,228 +657,232 @@
     </div>
   </nav>
 
-<div class="wrap">
+<main class="wrap">
 
-  <!-- MASTHEAD -->
-  <div class="masthead">
-    <div class="masthead-eyebrow">Privates Lerncoaching · Grundschule bis Oberstufe</div>
-    <h1>Individuelle<br><em>Lernbegleitung</em></h1>
-    <p class="masthead-tagline">Mehr als Nachhilfe — ein Mentor, der Ihr Kind wirklich kennt</p>
-  </div>
-
-  <!-- INTRO STRIP -->
-  <div class="intro-strip">
-    <div class="intro-col">
-      <div class="intro-col-icon">🎯</div>
-      <div class="intro-col-label">Mehr als Stoff</div>
-      <div class="intro-col-text">Wissensvermittlung, Lernorganisation, Motivation und Konzentrationstraining in einem</div>
+  <!-- SECTION: ÜBERSICHT -->
+  <section id="uebersicht">
+    <!-- MASTHEAD -->
+    <div class="masthead">
+      <div class="masthead-eyebrow">Privates Lerncoaching · Grundschule bis Oberstufe</div>
+      <h1>Individuelle<br><em>Lernbegleitung</em></h1>
+      <p class="masthead-tagline">Mehr als Nachhilfe — ein Mentor, der Ihr Kind wirklich kennt</p>
     </div>
-    <div class="intro-divider"></div>
-    <div class="intro-col">
-      <div class="intro-col-icon">🤝</div>
-      <div class="intro-col-label">Echte Verbindlichkeit</div>
-      <div class="intro-col-text">Verlässliche Beziehung, individuelle Begleitung und klare Vereinbarungen mit Ihrem Kind</div>
-    </div>
-    <div class="intro-divider"></div>
-    <div class="intro-col">
-      <div class="intro-col-icon">🧘</div>
-      <div class="intro-col-label">Elternentlastung</div>
-      <div class="intro-col-text">Sie bleiben informiert, ohne selbst täglich eingreifen zu müssen</div>
-    </div>
-  </div>
 
-  <!-- BENEFITS -->
-  <div class="benefits-section">
-    <div class="benefits-label">Was diese Begleitung umfasst</div>
-    <div class="benefits-flow">
-      <span class="ben-tag">Wissenslücken schließen</span>
-      <span class="ben-tag">Lernstrategien entwickeln</span>
-      <span class="ben-tag">Motivation fördern</span>
-      <span class="ben-tag">Konzentration stärken</span>
-      <span class="ben-tag">Verlässliche Begleitung</span>
-      <span class="ben-tag">Entlastung für Eltern</span>
-    </div>
-  </div>
-
-  <!-- PROGRAM -->
-  <div class="program-header">
-    <h2>Das Programm</h2>
-    <p>Drei Begleitungsstufen — maßgeschneidert nach dem Bedarf Ihres Kindes</p>
-  </div>
-
-  <div class="program-grid">
-
-    <!-- BEGLEITUNG -->
-    <div class="prog-col">
-      <div class="prog-col-head">
-        <div class="prog-level">Stufe I</div>
-        <div class="prog-name">Begleitung</div>
-        <div class="prog-desc">Stabilisieren · Strukturieren · Halten</div>
+    <!-- INTRO STRIP -->
+    <div class="intro-strip">
+      <div class="intro-col">
+        <div class="intro-col-icon">🎯</div>
+        <div class="intro-col-label">Mehr als Stoff</div>
+        <div class="intro-col-text">Wissensvermittlung, Lernorganisation, Motivation und Konzentrationstraining in einem</div>
       </div>
-      <div class="prog-col-for">
-        <div class="for-title">Geeignet für</div>
-        <ul class="prog-for-list">
-          <li>Stabile Schüler mit Bedarf an Routine</li>
-          <li>Regelmäßige Hausaufgabenstruktur</li>
-          <li>Erhalt des Leistungsniveaus</li>
-          <li class="empty">.</li>
-        </ul>
+      <div class="intro-divider"></div>
+      <div class="intro-col">
+        <div class="intro-col-icon">🤝</div>
+        <div class="intro-col-label">Echte Verbindlichkeit</div>
+        <div class="intro-col-text">Verlässliche Beziehung, individuelle Begleitung und klare Vereinbarungen mit Ihrem Kind</div>
       </div>
-      <div class="prog-col-opts">
-        <div class="opt-row">
-          <div class="opt-row-header">
-            <span class="opt-row-label">Option A</span>
-            <span class="opt-row-freq">1× pro Woche</span>
-          </div>
-          <div class="opt-row-duration">60 Minuten / Einheit</div>
-          <div class="opt-pricing">
-            <span class="opt-unit">50 € / Einheit</span>
-            <span class="opt-month">200 €<span class="opt-month-label"> / Mo.</span></span>
-          </div>
+      <div class="intro-divider"></div>
+      <div class="intro-col">
+        <div class="intro-col-icon">🧘</div>
+        <div class="intro-col-label">Elternentlastung</div>
+        <div class="intro-col-text">Sie bleiben informiert, ohne selbst täglich eingreifen zu müssen</div>
+      </div>
+    </div>
+
+    <!-- BENEFITS -->
+    <div class="benefits-section">
+      <div class="benefits-label">Was diese Begleitung umfasst</div>
+      <div class="benefits-flow">
+        <span class="ben-tag">Wissenslücken schließen</span>
+        <span class="ben-tag">Lernstrategien entwickeln</span>
+        <span class="ben-tag">Motivation fördern</span>
+        <span class="ben-tag">Konzentration stärken</span>
+        <span class="ben-tag">Verlässliche Begleitung</span>
+        <span class="ben-tag">Entlastung für Eltern</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: LEISTUNGEN -->
+  <section id="leistungen">
+    <!-- PROGRAM -->
+    <div class="program-header">
+      <h2>Das Programm</h2>
+      <p>Drei Begleitungsstufen — maßgeschneidert nach dem Bedarf Ihres Kindes</p>
+    </div>
+
+    <div class="program-grid">
+
+      <!-- BEGLEITUNG -->
+      <div class="prog-col">
+        <div class="prog-col-head">
+          <div class="prog-level">Stufe I</div>
+          <div class="prog-name">Begleitung</div>
+          <div class="prog-desc">Stabilisieren · Strukturieren · Halten</div>
         </div>
-        <div class="opt-row">
-          <div class="opt-row-header">
-            <span class="opt-row-label">Option B</span>
-            <span class="opt-row-freq">1× pro Woche</span>
-          </div>
-          <div class="opt-row-duration">90 Minuten / Einheit</div>
-          <div class="opt-pricing">
-            <span class="opt-unit">65 € / Einheit</span>
-            <span class="opt-month">260 €<span class="opt-month-label"> / Mo.</span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FÖRDERUNG -->
-    <div class="prog-col featured">
-      <div class="prog-col-head">
-        <div class="prog-rec">Meistgewählt</div>
-        <div class="prog-level">Stufe II</div>
-        <div class="prog-name">Förderung</div>
-        <div class="prog-desc">Aufholen · Verbessern · Wachsen</div>
-      </div>
-      <div class="prog-col-for">
-        <div class="for-title">Geeignet für</div>
-        <ul class="prog-for-list">
-          <li>Bestehende Wissenslücken schließen</li>
-          <li>Gezielte Notenverbesserung</li>
-          <li>Regelmäßige strukturierte Unterstützung</li>
-          <li class="empty">.</li>
-        </ul>
-      </div>
-      <div class="prog-col-opts">
-        <div class="opt-row">
-          <div class="opt-row-header">
-            <span class="opt-row-label">Option A</span>
-            <span class="opt-row-freq">2× pro Woche</span>
-          </div>
-          <div class="opt-row-duration">60 Minuten / Einheit</div>
-          <div class="opt-pricing">
-            <span class="opt-unit">50 € / Einheit</span>
-            <span class="opt-month">400 €<span class="opt-month-label"> / Mo.</span></span>
-          </div>
-        </div>
-        <div class="opt-row">
-          <div class="opt-row-header">
-            <span class="opt-row-label">Option B</span>
-            <span class="opt-row-freq">2× pro Woche</span>
-          </div>
-          <div class="opt-row-duration">90 Minuten / Einheit</div>
-          <div class="opt-pricing">
-            <span class="opt-unit">65 € / Einheit</span>
-            <span class="opt-month">520 €<span class="opt-month-label"> / Mo.</span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- INTENSIV -->
-    <div class="prog-col">
-      <div class="prog-col-head">
-        <div class="prog-level">Stufe III</div>
-        <div class="prog-name">Intensiv</div>
-        <div class="prog-desc">Durchstarten · Aufholen · Bestehen</div>
-      </div>
-      <div class="prog-col-for">
-        <div class="for-title">Geeignet für</div>
-        <ul class="prog-for-list">
-          <li>Größere Lernrückstände</li>
-          <li>Prüfungs- und Klausurphasen</li>
-          <li>Versetzungsgefährdung</li>
-          <li>Engmaschige, intensive Begleitung</li>
-        </ul>
-      </div>
-      <div class="prog-col-opts">
-        <div class="opt-row">
-          <div class="opt-row-header">
-            <span class="opt-row-label">Option A</span>
-            <span class="opt-row-freq">3× pro Woche</span>
-          </div>
-          <div class="opt-row-duration">60 Minuten / Einheit</div>
-          <div class="opt-pricing">
-            <span class="opt-unit">50 € / Einheit</span>
-            <span class="opt-month">600 €<span class="opt-month-label"> / Mo.</span></span>
-          </div>
-        </div>
-        <div class="opt-row">
-          <div class="opt-row-header">
-            <span class="opt-row-label">Option B</span>
-            <span class="opt-row-freq">3× pro Woche</span>
-          </div>
-          <div class="opt-row-duration">90 Minuten / Einheit</div>
-          <div class="opt-pricing">
-            <span class="opt-unit">65 € / Einheit</span>
-            <span class="opt-month">780 €<span class="opt-month-label"> / Mo.</span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ADVISORY NOTE -->
-  <div class="advisory">
-    <div class="advisory-aside">
-      <span class="advisory-roman">i</span>
-      <div class="advisory-aside-label">Hinweis</div>
-    </div>
-    <div class="advisory-content">
-      <h3>Zur Wahl der richtigen Einheit</h3>
-      <p>Die Förderstufe bestimmt die Intensität der Begleitung — nicht die Uhr. Beide Einheitenlängen stehen in jeder Stufe zur Verfügung. Die Wahl richtet sich nach dem individuellen Lernbedarf, dem Ziel und dem Tempo Ihres Kindes.</p>
-      <div class="advisory-two">
-        <div class="advisory-block">
-          <h4>60 Minuten</h4>
-          <ul>
-            <li>Fokussiertes, konzentriertes Arbeiten</li>
-            <li>Stoff festigen und wiederholen</li>
-            <li>Hausaufgaben strukturiert begleiten</li>
+        <div class="prog-col-for">
+          <div class="for-title">Geeignet für</div>
+          <ul class="prog-for-list">
+            <li>Stabile Schüler mit Bedarf an Routine</li>
+            <li>Regelmäßige Hausaufgabenstruktur</li>
+            <li>Erhalt des Leistungsniveaus</li>
           </ul>
         </div>
-        <div class="advisory-block">
-          <h4>90 Minuten</h4>
-          <ul>
-            <li>Größere Wissenslücken aufarbeiten</li>
-            <li>Mehrere Fächer oder Themen parallel</li>
-            <li>Klassenarbeitsvorbereitung</li>
-            <li>Tiefe und nachhaltige Förderung</li>
+        <div class="prog-col-opts">
+          <div class="opt-row">
+            <div class="opt-row-header">
+              <span class="opt-row-label">Option A</span>
+              <span class="opt-row-freq">1× pro Woche</span>
+            </div>
+            <div class="opt-row-duration">60 Minuten / Einheit</div>
+            <div class="opt-pricing">
+              <span class="opt-unit">50 € / Einheit</span>
+              <span class="opt-month">200 €<span class="opt-month-label"> / Mo.</span></span>
+            </div>
+          </div>
+          <div class="opt-row">
+            <div class="opt-row-header">
+              <span class="opt-row-label">Option B</span>
+              <span class="opt-row-freq">1× pro Woche</span>
+            </div>
+            <div class="opt-row-duration">90 Minuten / Einheit</div>
+            <div class="opt-pricing">
+              <span class="opt-unit">65 € / Einheit</span>
+              <span class="opt-month">260 €<span class="opt-month-label"> / Mo.</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FÖRDERUNG -->
+      <div class="prog-col featured">
+        <div class="prog-col-head">
+          <div class="prog-rec">Meistgewählt</div>
+          <div class="prog-level">Stufe II</div>
+          <div class="prog-name">Förderung</div>
+          <div class="prog-desc">Aufholen · Verbessern · Wachsen</div>
+        </div>
+        <div class="prog-col-for">
+          <div class="for-title">Geeignet für</div>
+          <ul class="prog-for-list">
+            <li>Bestehende Wissenslücken schließen</li>
+            <li>Gezielte Notenverbesserung</li>
+            <li>Regelmäßige strukturierte Unterstützung</li>
           </ul>
+        </div>
+        <div class="prog-col-opts">
+          <div class="opt-row">
+            <div class="opt-row-header">
+              <span class="opt-row-label">Option A</span>
+              <span class="opt-row-freq">2× pro Woche</span>
+            </div>
+            <div class="opt-row-duration">60 Minuten / Einheit</div>
+            <div class="opt-pricing">
+              <span class="opt-unit">50 € / Einheit</span>
+              <span class="opt-month">400 €<span class="opt-month-label"> / Mo.</span></span>
+            </div>
+          </div>
+          <div class="opt-row">
+            <div class="opt-row-header">
+              <span class="opt-row-label">Option B</span>
+              <span class="opt-row-freq">2× pro Woche</span>
+            </div>
+            <div class="opt-row-duration">90 Minuten / Einheit</div>
+            <div class="opt-pricing">
+              <span class="opt-unit">65 € / Einheit</span>
+              <span class="opt-month">520 €<span class="opt-month-label"> / Mo.</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTENSIV -->
+      <div class="prog-col">
+        <div class="prog-col-head">
+          <div class="prog-level">Stufe III</div>
+          <div class="prog-name">Intensiv</div>
+          <div class="prog-desc">Durchstarten · Aufholen · Bestehen</div>
+        </div>
+        <div class="prog-col-for">
+          <div class="for-title">Geeignet für</div>
+          <ul class="prog-for-list">
+            <li>Größere Lernrückstände</li>
+            <li>Prüfungs- und Klausurphasen</li>
+            <li>Versetzungsgefährdung</li>
+            <li>Engmaschige, intensive Begleitung</li>
+          </ul>
+        </div>
+        <div class="prog-col-opts">
+          <div class="opt-row">
+            <div class="opt-row-header">
+              <span class="opt-row-label">Option A</span>
+              <span class="opt-row-freq">3× pro Woche</span>
+            </div>
+            <div class="opt-row-duration">60 Minuten / Einheit</div>
+            <div class="opt-pricing">
+              <span class="opt-unit">50 € / Einheit</span>
+              <span class="opt-month">600 €<span class="opt-month-label"> / Mo.</span></span>
+            </div>
+          </div>
+          <div class="opt-row">
+            <div class="opt-row-header">
+              <span class="opt-row-label">Option B</span>
+              <span class="opt-row-freq">3× pro Woche</span>
+            </div>
+            <div class="opt-row-duration">90 Minuten / Einheit</div>
+            <div class="opt-pricing">
+              <span class="opt-unit">65 € / Einheit</span>
+              <span class="opt-month">780 €<span class="opt-month-label"> / Mo.</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ADVISORY NOTE -->
+    <div class="advisory">
+      <div class="advisory-aside">
+        <span class="advisory-roman">i</span>
+        <div class="advisory-aside-label">Hinweis</div>
+      </div>
+      <div class="advisory-content">
+        <h3>Zur Wahl der richtigen Einheit</h3>
+        <p>Die Förderstufe bestimmt die Intensität der Begleitung — nicht die Uhr. Beide Einheitenlängen stehen in jeder Stufe zur Verfügung. Die Wahl richtet sich nach dem individuellen Lernbedarf, dem Ziel und dem Tempo Ihres Kindes.</p>
+        <div class="advisory-two">
+          <div class="advisory-block">
+            <h4>60 Minuten</h4>
+            <ul>
+              <li>Fokussiertes, konzentriertes Arbeiten</li>
+              <li>Stoff festigen und wiederholen</li>
+              <li>Hausaufgaben strukturiert begleiten</li>
+            </ul>
+          </div>
+          <div class="advisory-block">
+            <h4>90 Minuten</h4>
+            <ul>
+              <li>Größere Wissenslücken aufarbeiten</li>
+              <li>Mehrere Fächer oder Themen parallel</li>
+              <li>Klassenarbeitsvorbereitung</li>
+              <li>Tiefe und nachhaltige Förderung</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- CUSTOM INFO BOX -->
-  <div class="custom-info">
-    <div class="custom-info-aside">
-      <span class="custom-info-icon">💡</span>
-      <div class="custom-info-label">Individuell</div>
+    <!-- CUSTOM INFO BOX -->
+    <div class="custom-info" id="kontakt">
+      <div class="custom-info-aside">
+        <span class="custom-info-icon">💡</span>
+        <div class="custom-info-label">Individuell</div>
+      </div>
+      <div class="custom-info-content">
+        <h3>Nichts Passendes dabei?</h3>
+        <p>Kein vordefiniertes Paket passt zu Ihren Anforderungen? Kontaktieren Sie mich gerne — wir beraten Sie individuell und erstellen gemeinsam einen pädagogisch angemessenen Plan, der genau auf die Bedürfnisse Ihres Kindes zugeschnitten ist.</p>
+      </div>
     </div>
-    <div class="custom-info-content">
-      <h3>Nichts Passendes dabei?</h3>
-      <p>Kein vordefiniertes Paket passt zu Ihren Anforderungen? Kontaktieren Sie mich gerne — wir beraten Sie individuell und erstellen gemeinsam einen pädagogisch angemessenen Plan, der genau auf die Bedürfnisse Ihres Kindes zugeschnitten ist.</p>
-    </div>
-  </div>
+  </section>
 
   <!-- SIGN-OFF -->
   <div class="signoff">
@@ -888,7 +896,7 @@
     Alle Preise inkl. Vor- und Nachbereitung · Anfahrt
   </div>
 
-</div>
+</main>
 
 <script>
   // Toggle options on click for each program column
